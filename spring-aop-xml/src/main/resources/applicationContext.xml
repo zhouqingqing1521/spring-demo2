@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+">
+    <!-- 配置目标类到SpringIOC容器中-->
+    <bean id="TeacherService" class="com.briup.bean.service.Impl.TeacherService"/>
+ <!-- 配置切面类到SpringIOC容器中-->
+    <bean id="Aspect" class="com.briup.bean.aop.MyAspect"/>
+    <!-- 配置aop -->
+    <aop:config>
+        <!-- 配置切入点，一组连接点的集合（Spring中就是一组方法的集合） -->
+        <!-- id: 切入点的唯一标识 -->
+        <!-- expression:切入点表达式 -->
+        <aop:pointcut id="pt()" expression="execution(* com.briup.service.*.*(..))"/>
+        <!-- 配置切面 -->
+        <aop:aspect id="aspect" ref="Aspect">
+            <aop:after method="afterAdvice" pointcut-ref="pt()"/>
+            <aop:before method="beforeAdvice" pointcut-ref="pt()"/>
+            <aop:around method="around" pointcut-ref="pt()"/>
+            <aop:after-returning method="adviceReturn" pointcut-ref="pt()"/>
+            <aop:after-throwing method="adviceThrow" pointcut-ref="pt()" throwing="e"/>
+        </aop:aspect>
+    </aop:config>
+    </beans>

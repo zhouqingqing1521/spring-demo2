@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-proxy" />
+        <module name="spring-mybatis-annotation" />
+        <module name="spring-test" />
+        <module name="spring-ioc-annotation" />
+        <module name="spring-ioc-xml" />
+        <module name="spring-mybatis-xml" />
+        <module name="spring-homework-demo-1" />
+        <module name="spring-homework-demo-2" />
+        <module name="spring-homework-demo-3" />
+        <module name="spring-transaction" />
+        <module name="spring-jdbc" />
+        <module name="spring-aop-annotation" />
+        <module name="spring-aop-xml" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-hmework" target="8" />
+      <module name="spring-homework-demo-1" target="8" />
+      <module name="spring-mybatis-annotation" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

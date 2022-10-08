@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-hmework/spring-homework-demo-1.iml" filepath="$PROJECT_DIR$/spring-hmework/spring-homework-demo-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mybatis-jdbc/spring-mybatis-annotation.iml" filepath="$PROJECT_DIR$/spring-mybatis-jdbc/spring-mybatis-annotation.iml" />
+    </modules>
+  </component>
+</project>
